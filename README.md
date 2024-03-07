@@ -11,7 +11,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 ---
 The Contrail Web Controller repository contains front end Web UI code for the management of Contrail network virtualization solution. This repository contains code specific to Dashboard, Configuration, Monitoring, Reporting features available through Contrail Web UI. 
 
-The code to retreive data from other components of the system(such as vrouter, analytics etc) as requested by the features mentioned above is available in a separate code repository (<https://github.com/tungstenfabric/tf-web-core/>)
+The code to retreive data from other components of the system(such as vrouter, analytics etc) as requested by the features mentioned above is available in a separate code repository (<https://github.com/opensdn-io/tf-web-core/>)
 
 The contrail web controller component requests data to the webserver which inturn request data from various other components in the system. It further processes, consolidate the results and returns as a single response to the original request. The API request from web client to webserver and web server to other components are REST based. 
 
