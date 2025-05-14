@@ -131,6 +131,39 @@ define([
                         ]
                     },
                     {
+                        columns: [
+                            {
+                                elementId: 'route_replication_threshold',
+                                view: 'FormInputView',
+                                viewConfig: {
+                                    path: 'route_replication_threshold',
+                                    dataBindValue: 'route_replication_threshold',
+                                    class: 'col-xs-6',
+                                    label: 'Route Replication Threshold',
+                                    placeholder: '0 - 60 minutes'
+                                }
+                            },
+                            {
+                                elementId: 'bgp_all_tags_are_global',
+                                view: 'FormRadioButtonView',
+                                viewConfig: {
+                                    label: 'All Tags Are Global',
+                                    path: 'bgp_all_tags_are_global',
+                                    dataBindValue: 'bgp_all_tags_are_global',
+                                    class: 'col-xs-6',
+                                    elementConfig: {
+                                        dataObj: [
+                                            {'label': 'Enable',
+                                             'value': 'true'},
+                                            {'label': 'Disable',
+                                             'value': 'false'}
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
                         columns : [
                             {
                                 elementId: 'graceful_restart_enable',
@@ -144,17 +177,6 @@ define([
                                     elementConfig : {
                                         isChecked:false
                                     }
-                                }
-                            },
-                            {
-                                elementId: 'route_replication_threshold',
-                                view: 'FormInputView',
-                                viewConfig: {
-                                    path: 'route_replication_threshold',
-                                    dataBindValue: 'route_replication_threshold',
-                                    class: 'col-xs-6',
-                                    label: 'Route Replication Threshold',
-                                    placeholder: '0 - 60 minutes'
                                 }
                             },
                         ]

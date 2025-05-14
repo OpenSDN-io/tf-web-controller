@@ -136,6 +136,12 @@
                     }
                     return 'Enabled';
                 }
+                if ('bgp_all_tags_are_global' == rowData['key']) {
+                    if (!val) {
+                        return 'Disabled';
+                    }
+                    return 'Enabled';
+                }
                 if('encryption_tunnel_endpoints' === rowData['key']) {
                 	   if(val == undefined || val.length == 0 || val == null ){
                         return '-';
