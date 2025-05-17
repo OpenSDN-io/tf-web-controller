@@ -632,6 +632,7 @@ define([
             {"key": "bgp_always_compare_med", "name": "Always Compare MED"},
             {"key": "route_replication_threshold", "name": "Route Replication Threshold"},
             {"key": "bgp_all_tags_are_global", "name": "All Tags Are Global"},
+            {"key": "enable_4byte_as", "name": "4Byte ASN Support"},
         ];
         this.GLOBAL_BGP_OPTIONS_SECTION_ID = "global-bgp-options-section";
         this.GLOBAL_BGP_OPTIONS_ID = "global-bgp-options";

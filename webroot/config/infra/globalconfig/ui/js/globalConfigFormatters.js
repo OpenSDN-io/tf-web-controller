@@ -142,6 +142,12 @@
                     }
                     return 'Enabled';
                 }
+                if ('enable_4byte_as' == rowData['key']) {
+                    if (!val) {
+                        return 'Disabled';
+                    }
+                    return 'Enabled';
+                }
                 if('encryption_tunnel_endpoints' === rowData['key']) {
                 	   if(val == undefined || val.length == 0 || val == null ){
                         return '-';

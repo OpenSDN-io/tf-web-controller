@@ -179,6 +179,24 @@ define([
                                     }
                                 }
                             },
+                            {
+                                elementId: 'enable_4byte_as',
+                                view: 'FormRadioButtonView',
+                                viewConfig: {
+                                    label: '4Byte ASN Support',
+                                    path: 'enable_4byte_as',
+                                    dataBindValue: 'enable_4byte_as',
+                                    class: 'col-xs-6',
+                                    elementConfig: {
+                                        dataObj: [
+                                            {'label': 'Enable',
+                                             'value': 'true'},
+                                            {'label': 'Disable',
+                                             'value': 'false'}
+                                        ]
+                                    }
+                                }
+                            }
                         ]
                     },
                     {

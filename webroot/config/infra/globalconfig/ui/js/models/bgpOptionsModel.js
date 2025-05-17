@@ -29,6 +29,7 @@ define([
             },
             "bgp_always_compare_med": false,
             "bgp_all_tags_are_global": false,
+            "enable_4byte_as": false,
             "user_created_bgpaas_parameters": "50000 - 50512",
             "route_replication_threshold": "0"
         },
@@ -140,6 +141,8 @@ define([
                 (($.trim(modelConfig['bgp_always_compare_med']).length === 0) ? "false" : modelConfig['bgp_always_compare_med'].toString());
             modelConfig['bgp_all_tags_are_global'] =
                 (($.trim(modelConfig['bgp_all_tags_are_global']).length === 0) ? "false" : modelConfig['bgp_all_tags_are_global'].toString());
+            modelConfig['enable_4byte_as'] =
+                (($.trim(modelConfig['enable_4byte_as']).length === 0) ? "false" : modelConfig['enable_4byte_as'].toString());
 
             return modelConfig;
         },
@@ -207,6 +210,8 @@ define([
                     newBGPOptionsConfig['bgp_always_compare_med'];
                 globalSysConfigData['global-system-config']['bgp_all_tags_are_global'] =
                     newBGPOptionsConfig['bgp_all_tags_are_global'];
+                globalSysConfigData['global-system-config']['enable_4byte_as'] =
+                    newBGPOptionsConfig['enable_4byte_as'];
                 globalSysConfigData['global-system-config']['autonomous_system'] =
                     Number(newBGPOptionsConfig['autonomous_system']);
                 globalSysConfigData['global-system-config']['route_replication_threshold'] =
@@ -283,6 +288,8 @@ define([
                     $.parseJSON(newBGPOptionsConfig['bgp_always_compare_med']);
                 globalSysConfigData['global-system-config']['bgp_all_tags_are_global'] =
                     $.parseJSON(newBGPOptionsConfig['bgp_all_tags_are_global']);
+                globalSysConfigData['global-system-config']['enable_4byte_as'] =
+                    $.parseJSON(newBGPOptionsConfig['enable_4byte_as']);
 
                 if (null != newBGPOptionsConfig['uuid']) {
                     globalSysConfigData['global-system-config']['uuid'] =
