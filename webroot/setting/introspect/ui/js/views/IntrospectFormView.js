@@ -155,7 +155,7 @@ define([
                     .off("click", ".introspect-link")
                     .on("click", ".introspect-link", function () {
                         var xmlName = $(this).data("link"),
-                            params = {x: $(this).text()};
+                            params = {x: encodeURIComponent($(this).text())};
 
                         self.renderIntrospectResult(xmlName, params);
                     });
